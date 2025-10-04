@@ -41,8 +41,8 @@ export function MultiSelect({
   emptyText = "No options found.",
   className,
 }: MultiSelectProps) {
-  const [open, setOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [open, setOpen] = React.useState(false);
+  const [searchTerm, setSearchTerm] = React.useState("");
 
   const handleSelect = React.useCallback(
     (value: string) => {

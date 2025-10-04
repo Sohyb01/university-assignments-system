@@ -18,7 +18,6 @@ import {
 import { redirectOnServer } from "@/app/actions/redirectOnServer";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
-import Image from "next/image";
 
 const formSchema = z.object({
   username: z.string().min(1, "Required").max(255, "Too long!"),
