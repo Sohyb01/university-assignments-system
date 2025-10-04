@@ -14,7 +14,7 @@ const Assignments = async ({ params }: { params: { courseId: string } }) => {
     params.courseId
   );
   return (
-    <div className="px-4 overflow-y-scroll flex flex-col gap-8">
+    <div className="overflow-y-scroll flex flex-col gap-8">
       {/* Due Assignments */}
       <Collapsible defaultOpen>
         <div className="flex item-center justify-between mb-4">
@@ -28,7 +28,7 @@ const Assignments = async ({ params }: { params: { courseId: string } }) => {
             <Button size="icon">
               <ChevronUp
                 className="group-data-[state=open]:rotate-180 transition-all"
-                size={24}
+                size={16}
               />
               <span className="sr-only">Toggle</span>
             </Button>
@@ -67,7 +67,7 @@ const Assignments = async ({ params }: { params: { courseId: string } }) => {
             <Button size="icon">
               <ChevronUp
                 className="group-data-[state=open]:rotate-180 transition-all"
-                size={24}
+                size={16}
               />
               <span className="sr-only">Toggle</span>
             </Button>

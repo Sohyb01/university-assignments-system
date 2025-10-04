@@ -97,7 +97,7 @@ const StudentAssignmentCard: React.FC<AssignmentCardProps> = ({
       className={`bg-background w-full rounded-[1rem] md:min-w-[300px] lg:min-w-[480px] max-w-[480px]`}
     >
       <CardHeader>
-        <CardTitle className="flex items-center justify-between">
+        <CardTitle className="flex items-center justify-between flex-wrap">
           <div className="text-p_ui w-full items-center flex justify-between">
             {assignment.assignmentName}
           </div>
@@ -165,7 +165,7 @@ const StudentAssignmentCard: React.FC<AssignmentCardProps> = ({
           <p className="text-sm text-success">{uploadSuccess}</p>
         )}
       </CardContent>
-      <CardFooter className="mt-auto flex gap-2">
+      <CardFooter className="mt-auto flex gap-2 flex-wrap">
         {/* Hidden file input for submission */}
         <input
           type="file"

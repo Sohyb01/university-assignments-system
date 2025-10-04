@@ -101,7 +101,7 @@ const ProfessorSubmissionRow: React.FC<ProfessorSubmissionRowProps> = ({
           </div>
         )}
       </div>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center flex-wrap">
         {submissionData.submission && (
           <Link
             href={submissionData.submission}

@@ -30,15 +30,15 @@ const AssignmentsPage = async ({
   const pastAssignments = assignmentsData.filter((a) => a.dueDate <= now);
 
   return (
-    <div className="px-4 overflow-y-scroll flex flex-col gap-8">
+    <div className="overflow-y-scroll flex flex-col gap-8">
       <div className="flex justify-between pb-2">
         <h3 className="text-h3">Assignments</h3>
         <Link
           className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
           href="assignments/new"
         >
-          <PlusIcon className="mr-2" />
-          Create Assignment
+          <PlusIcon className="mr-2" size={16} />
+          Create
         </Link>
       </div>
       {/* Due Assignments */}

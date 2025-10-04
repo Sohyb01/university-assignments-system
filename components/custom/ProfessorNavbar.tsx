@@ -51,7 +51,7 @@ const ProfessorNavbar = () => {
                   <div className="sidebar-links-container">
                     <Link
                       onClick={() => setOpen(false)}
-                      href="/dashboard/instructor/home"
+                      href="/dashboard/professor/home"
                     >
                       <Button
                         className="sidebar-button rounded-full justify-start gap-2 px-3"
@@ -62,7 +62,7 @@ const ProfessorNavbar = () => {
                     </Link>
                     <Link
                       onClick={() => setOpen(false)}
-                      href="/dashboard/instructor/courses"
+                      href="/dashboard/professor/courses"
                     >
                       <Button
                         className="sidebar-button rounded-full justify-start gap-2 px-3"

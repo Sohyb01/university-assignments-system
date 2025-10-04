@@ -30,7 +30,7 @@ export default async function AssignmentSubmissionsPage({
     await getAssignmentSubmissions(assignmentId);
 
   return (
-    <div className="px-4">
+    <div className="">
       {!assignmentObj ? (
         <div className="not-found">
           No assignment found with the specified ID.
