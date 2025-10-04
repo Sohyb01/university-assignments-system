@@ -1,0 +1,90 @@
+.nav {
+  @apply w-full flex justify-center z-50 mx-auto bg-background text-foreground border-b border-border py-5;
+}
+.nav-internal {
+  @apply w-full flex justify-between items-center px-4 md:px-8;
+}
+.dashboard-sizing {
+  height: calc(100vh - 66.4px);
+}
+
+/* Navbar Sheets and Sidebars */
+.sidebar-groups-container {
+  @apply flex flex-col gap-8 w-full items-start;
+}
+.sidebar-group {
+  @apply flex flex-col gap-2 w-full items-start text-p_ui_medium;
+}
+.sidebar-links-container {
+  @apply flex flex-col gap-4 w-full;
+}
+.sidebar-button {
+  @apply gap-2 w-full justify-start border-border border-solid border-[1px];
+}
+
+/* Old styles below */
+/* Buttons */
+/* Other */
+.pes-feature {
+  @apply w-full px-5 py-3 bg-card border-primary text-subtle_medium border-[1px] text-foreground text-start flex items-center rounded-[1rem] gap-2;
+}
+.pes-testimonial {
+  @apply flex justify-center items-center gap-4 w-full max-w-[332px] lg:max-w-[338px] p-4 text-start shadow-lg rounded-md bg-card border-border border-[1px];
+}
+.pes-value {
+  @apply flex justify-center items-center gap-4 w-full max-w-[332px] lg:max-w-none p-6 text-start shadow-lg rounded-md bg-muted;
+}
+.pes-problem {
+  @apply bg-muted text-foreground px-4 py-3 border-solid border-[1px] border-destructive border-b-[0px] rounded-md;
+}
+.pes-solution {
+  @apply bg-muted text-foreground px-4 py-3 border-solid border-[1px] border-primary rounded-md;
+}
+
+.pes-grid-form {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-8 w-full pt-4 max-w-screen-md;
+}
+.dashboard-tab-wrapper {
+  @apply flex w-full flex-col gap-4;
+}
+
+.tab-trigger {
+  @apply data-[state=active]:text-foreground text-muted-foreground !rounded-none data-[state=active]:border-b-[2px] border-b-primary mt-1.5;
+}
+
+.not-found {
+  @apply flex gap-2 items-center bg-muted/50 border-muted text-muted-foreground border-[1px] rounded-[0.25rem] p-2.5 md:max-w-[380px] text-subtle_semibold
+}
+
+.not-found-success {
+  @apply flex gap-2 items-center bg-success/5 border-success/40 text-muted-foreground border-[1px] rounded-[0.25rem] p-2.5 md:max-w-[380px] text-subtle_semibold
+}
+
+.sx-react-calendar-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  height: 800px;
+  max-height: 90vh;
+}
+
+/* Legal text styling and spacing for legal pages */
+.legal p {
+  @apply text-p
+ }
+
+.legal h1 {
+ @apply text-h1
+}
+.legal h2 {
+  @apply text-h2
+ }
+ .legal h3 {
+  @apply text-h3
+ }
+ .legal h4 {
+  @apply text-h4
+ }
+
+ .pricing-card{
+  @apply rounded-[1rem] bg-background p-6 flex flex-col gap-2 items-start text-start border-foreground/50 border-solid border-[2px] flex-1 w-full md:min-w-[380px] max-w-[420px] grow h-fit shadow-md py-10 lg:h-full lg:max-h-full
+ }

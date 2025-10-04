@@ -1,26 +1,169 @@
-@import "tailwindcss";
+/* This is the file that contains all the color variables used across the platform */
+
+/* background = background color */
+/* foreground = text color */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: 0 0% 100%;
+  /* Old foreground */
+  /* --foreground: 228.57 84% 4.9%; */ 
+  --foreground: 206 100% 18%;
+  --shade: 210 40% 96%; /* Slate 100 */
+  --border: 214.3 31.8% 80%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
 }
+
+/* * {
+  @apply duration-100
+} */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* --background: 0 0% 100%;
+    --foreground: 228.57 84% 4.9%; */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 224.28 76.33% 48.04%; /* PES BLUE */
+    --primary-foreground: 0 0% 100%; /* WHITE */
+    --secondary: 24.58 94.98% 53.14%; /* PES ORANGE */
+    --secondary-foreground: 0 0% 100%; /* WHITE */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.38 16.32% 46.86%; /* SLATE 500 */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%; /* WHITE */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%; /* WHITE */
+    --shade-blue: 201 100% 96%; /* EBF8FF */
+    /* --border: 214.3 31.8% 91.4%; */
+    --input: 214.3 31.8% 80%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --whatsapp-green: #25d366;
+    --radius: 0.5rem;
+  }
+
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+  }
+  /* Entire scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+    height: 4px;
+  }
+
+  /* Track (the background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: transparent
+  }
+
+  /* Handle (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary)); /* Color of the handle */
+    border-radius: 10px; /* Optional: Rounded corners */
+  }
+}
+
+/* Section horizontal padding */
+.section-px {
+  @apply px-4 md:px-8 lg:px-0;
+}
+
+/* Icon SVG Fills & Colors */
+.pes-svg {
+  stroke: inherit;
+  /* fill: var(--background); */
+}
+.pes-svg:hover {
+  /* stroke: hsl(var(--primary)); */
+  /* fill: var(--background); */
+}
+
+/* Headers */
+.text-h1-website {
+  font-size: 48px;
+  line-height: 48px;
+  font-family: var(--header), "Inter";
+}
+.text-h2-website {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: var(--header), "Inter";
+}
+.text-h3-website {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: var(--header), "Inter";
+}
+.text-h4-website {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: var(--header), "Inter";
+}
+
+/* Horizontal Divider */
+.horizontal-divider {
+  @apply w-full h-[1px] bg-border;
+}
+/* Vertical Divider */
+.vertical-divider {
+  @apply h-full w-[1px] bg-border;
+}
+
+.file-upload {
+  @apply text-muted-foreground;
+}
+.file-upload::-webkit-file-upload-button {
+  @apply bg-primary text-primary-foreground;
+}
+.file-upload::-webkit-file-selector-button {
+  @apply bg-primary text-primary-foreground;
+}
+.rdp-vhidden {
+  @apply hidden;
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.unavailable-select {
+  @apply text-subtle_medium text-muted-foreground px-2 py-1 select-none;
+}
+
